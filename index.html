@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scufita Rosie si vrajitoarea cea rea</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400&family=Circular+Pro:wght@400&display=swap">
+    <style>
+        body {
+            background-color: #020015;
+            font-family: 'Averia Serif Libre', serif, 'Circular Pro', sans-serif;
+        }
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #020015;
+        }
+        .logo-container img {
+            width: 100%;
+            max-width: 600px;
+        }
+        .carousel {
+            display: none;
+        }
+        .carousel-item {
+            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 20px;
+        }
+        .carousel-item img {
+            max-width: 60%;
+            max-height: 100%;
+            height: auto;
+        }
+        .slide-content {
+            width: 35%;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .slide-content p {
+            color: #59253a;
+            text-align: justify;
+        }
+        .btn-custom {
+            background-color: #a1c3d1;
+            color: #020015;
+            border-color: #a1c3d1;
+        }
+        .btn-custom:hover {
+            background-color: #f172a1;
+            color: #020015;
+            border-color: #f172a1;
+        }
+        .modal-content {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .modal-header, .modal-footer {
+            border-color: #495057;
+        }
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+        .slide-bg-1 { background-color: #a1c3d1; }
+        .slide-bg-2 { background-color: #b39bc8; }
+        .slide-bg-3 { background-color: #f0ebf4; }
+        .slide-bg-4 { background-color: #f172a1; }
+    </style>
+</head>
+<body>
+    <div class="logo-container" id="logo-container">
+        <img src="logo.png" alt="Logo">
+        <button class="btn btn-primary btn-custom" id="start-button">Start</button>
+    </div>
+
+    <div class="carousel" id="carousel">
+        <div class="carousel-item slide-bg-1" data-details="<h1>Slide 1 details</h1>
+                <p>O pădure densă și misterioasă, cu copaci înalți și frunziș bogat. Lumina soarelui se filtrează printre ramurile copacilor, creând un joc de lumini și umbre pe solul acoperit cu frunze.</p>
+            ">
+            <img src="1.jpg" alt="Image 1">
+            <div class="slide-content">
+                <p>O pădure densă și misterioasă, cu copaci înalți și frunziș bogat. Lumina soarelui se filtrează printre ramurile copacilor, creând un joc de lumini și umbre pe solul acoperit cu frunze.</p>
+                <p>În prim-plan, o căsuță mică și pitorească, cu acoperiș de paie și pereți din lemn, înconjurată de flori colorate (margarete, lalele, și trandafiri).</p>
+                <P>Scufița Roșie, o fetiță cu păr castaniu și lung, purtând o pelerină roșie strălucitoare și un coșuleț în mână, stă în fața casei, pregătindu-se să plece la drum.</P>
+                <p>În depărtare, pe o potecă din pădure, se poate observa o siluetă sinistră a unei vrăjitoare, Crocodilia, cu o pălărie neagră ascuțită și o mantie întunecată.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(1)">Detalii</button>
+            </div>
+        </div>
+        <div class="carousel-item slide-bg-2" data-details="Slide 2 details">
+            <img src="2.jpg" alt="Image 2">
+            <div class="slide-content">
+                <p>Slide 2 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(2)">Details</button>
+            </div>
+        </div>
+        
+        <div class="carousel-item slide-bg-4" data-details="Slide 3 details">
+            <img src="3.jpg" alt="Image 3">
+            <div class="slide-content">
+                <p>Slide 3 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(3)">Details</button>
+            </div>
+        </div>
+        <div class="carousel-item slide-bg-2" data-details="Slide 4 details">
+            <img src="4.jpg" alt="Image 4">
+            <div class="slide-content">
+                <p>Slide 4 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(4)">Details</button>
+            </div>
+        </div>
+
+        <div class="carousel-item slide-bg-1" data-details="Slide 5 details">
+            <img src="5.jpg" alt="Image 5">
+            <div class="slide-content">
+                <p>Slide 5 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(5)">Details</button>
+            </div>
+        </div>
+        <div class="carousel-item slide-bg-2" data-details="Slide 6 details">
+            <img src="6.jpg" alt="Image 6">
+            <div class="slide-content">
+                <p>Slide 6 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(6)">Details</button>
+            </div>
+        </div>
+
+        <div class="carousel-item slide-bg-4" data-details="Slide 7 details">
+            <img src="7.jpg" alt="Image 7">
+            <div class="slide-content">
+                <p>Slide 7 Text</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(7)">Details</button>
+            </div>
+        </div>
+
+
+        <div class="carousel-item slide-bg-3" data-details="Slide 8 details">
+            <img src="8.jpg" alt="Image 8">
+            <div class="slide-content">
+                <p>Slide 8 Text</p>
+                <button class="btn btn-custom" onclick="restartSlides()">Restart</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(8)">Details</button>
+                <button class="btn btn-primary btn-custom" onclick="goHome()">Home</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="details-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-text"></p>
+                    <img id="modal-image" src="" alt="Detail Image" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
