@@ -10,6 +10,7 @@
         body {
             background-color: #020015;
             font-family: 'Averia Serif Libre', serif, 'Circular Pro', sans-serif;
+            font-size: 20px;
         }
         .logo-container {
             display: flex;
@@ -40,9 +41,10 @@
             height: auto;
         }
         .slide-content {
-            width: 35%;
+            width: 40%;
             text-align: right;
             padding-right: 20px;
+            padding-left: 20px;
         }
         .slide-content p {
             color: #59253a;
@@ -52,6 +54,7 @@
             background-color: #a1c3d1;
             color: #020015;
             border-color: #a1c3d1;
+            font-size: 20px;
         }
         .btn-custom:hover {
             background-color: #f172a1;
@@ -73,6 +76,17 @@
         .slide-bg-2 { background-color: #b39bc8; }
         .slide-bg-3 { background-color: #f0ebf4; }
         .slide-bg-4 { background-color: #f172a1; }
+
+        .author-text {
+            font-size: 0.8em;
+            color: #895061 !important; 
+            background-color: #f172a17a !important; 
+            padding: 5px 10px;
+            border-radius: 15px; /* Fundal rotunjit la capete */
+            margin-top: 20px;
+            text-align: right;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -82,79 +96,91 @@
     </div>
 
     <div class="carousel" id="carousel">
-        <div class="carousel-item slide-bg-1" data-details="<h1>Slide 1 details</h1>
-                <p>O pădure densă și misterioasă, cu copaci înalți și frunziș bogat. Lumina soarelui se filtrează printre ramurile copacilor, creând un joc de lumini și umbre pe solul acoperit cu frunze.</p>
-            ">
+        <div class="carousel-item slide-bg-1" data-details="Într-un ținut îndepărtat, Scufița Roșie trăiește într-o căsuță mică alături de mama ei. La începutul verii, ea decide să o viziteze pe bunica ei, care locuiește dincolo de pădure. Ajunsă acolo, nu o găsește nicăieri.">
             <img src="1.jpg" alt="Image 1">
             <div class="slide-content">
-                <p>O pădure densă și misterioasă, cu copaci înalți și frunziș bogat. Lumina soarelui se filtrează printre ramurile copacilor, creând un joc de lumini și umbre pe solul acoperit cu frunze.</p>
-                <p>În prim-plan, o căsuță mică și pitorească, cu acoperiș de paie și pereți din lemn, înconjurată de flori colorate (margarete, lalele, și trandafiri).</p>
-                <P>Scufița Roșie, o fetiță cu păr castaniu și lung, purtând o pelerină roșie strălucitoare și un coșuleț în mână, stă în fața casei, pregătindu-se să plece la drum.</P>
-                <p>În depărtare, pe o potecă din pădure, se poate observa o siluetă sinistră a unei vrăjitoare, Crocodilia, cu o pălărie neagră ascuțită și o mantie întunecată.</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
+                <p>Într-o lume îndepărtată, Scufița Roșie își ducea viața liniștită alături de mama sa într-o modestă căsuță. Odată cu sosirea verii, Scufița Roșie hotărăște să plece într-o călătorie pentru a-și vizita bunica, aflată la marginea pădurii. Cu inima plină de speranță și dorința de a-și întâlni bunica, Scufița Roșie pornește la drum. Însă, ajunsă la destinație, constată cu tristețe că bunica nu se află acolo, iar casa este pustie. Cu gândurile îndreptate către soarta bunicii sale, Scufița Roșie începe să se întoarcă spre casa ei, sperând să găsească un indiciu despre locul în care ar putea fi bunica.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
                 <button class="btn btn-secondary btn-custom" onclick="showDetails(1)">Detalii</button>
             </div>
         </div>
-        <div class="carousel-item slide-bg-2" data-details="Slide 2 details">
+        <div class="carousel-item slide-bg-2" data-details="Se întoarce grăbită acasă, dar pe drum se întâlnește cu vrăjitoarea care a răpit-o pe bunica ei. Pentru a o salva, Scufița Roșie trebuie să rezolve câteva probe date de vrăjitoare.">
             <img src="2.jpg" alt="Image 2">
             <div class="slide-content">
-                <p>Slide 2 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(2)">Details</button>
+                <p>Îndreptându-se grăbită spre căminul ei, Scufița Roșie se trezește pe drum în fața unei întâmplări neașteptate: o întâlnire cu vrăjitoarea Crocodilia, care o răpise pe bunica ei. Confruntată cu această situație nefericită, Scufița Roșie înțelege că singura modalitate de a-și salva bunica este să îndeplinească câteva provocări impuse de temuta vrăjitoare. Astfel, pentru a-și atinge scopul, Scufița Roșie este hotărâtă să înfrunte orice obstacol și să găsească soluții pentru a o elibera pe bunica ei din mâinile vrăjitoarei.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(2)">Detalii</button>
             </div>
         </div>
         
-        <div class="carousel-item slide-bg-4" data-details="Slide 3 details">
+        <div class="carousel-item slide-bg-4" data-details="Exemplu care are pătrat pefect: 10 apoi sirul: 12 31 147 49 441 1024 87 1369 1444 5. *Afiseaza: 4201
+
+        - Exemplu care afișează suma numerelor impare: 10 apoi sirul: 23 128 77 15 6 444 89 9100 10 49. *Afișează: 253">
             <img src="3.jpg" alt="Image 3">
             <div class="slide-content">
-                <p>Slide 3 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(3)">Details</button>
+                <h1>Proba 1</h1>
+                <p>Scufița Roșie se confruntă cu o provocare dificilă: trebuie să determine cel mai scurt drum pe care vrăjitoarea să îl parcurgă pentru a ajunge la convenția vrăjitoarelor. </p>
+                <p>Pentru a rezolva această problemă, ea trebuie să găsească cel mai mic număr par pătrat perfect dintr-un șir de numere. În cazul în care nu există un astfel de număr în șirul dat, Scufița Roșie trebuie să calculeze suma tuturor numerelor impare din acesta. Este o misiune dificilă, dar Scufița Roșie este hotărâtă să găsească soluția potrivită pentru a-și îndeplini sarcina și a-și salva bunica.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(3)">Detalii</button>
             </div>
         </div>
-        <div class="carousel-item slide-bg-2" data-details="Slide 4 details">
+        <div class="carousel-item slide-bg-2" data-details="Exemplu pentru test: 14, apoi șirul: 13525 122 144 342 21 143 212 6 34277243 32 112 221 4438 273372.     *Afișează: 13525 122 144 342 212 34277243 273372">
             <img src="4.jpg" alt="Image 4">
             <div class="slide-content">
-                <p>Slide 4 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(4)">Details</button>
+                <h1>Proba 2</h1>
+                <p>Vrăjitoarea are nevoie de un buchet special de flori, iar Scufița Roșie trebuie să îl adune. Ea trebuie să găsească flori roz, galbene și albastre.</p>
+                <p>Florile roz sunt reprezentate de numerele cu cel puțin 3 cifre în care cifra din mijloc este egală cu ultima cifră. Florile galbene sunt reprezentate de cel mai mare număr din șir care are exact 4 divizori. Florile albastre sunt numere palindrom din șir. Scufița Roșie trebuie să formeze un nou vector care să includă florile roz, galbene și albastre, în această ordine, pentru a îndeplini cerința vrăjitoarei.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(4)">Detalii</button>
             </div>
         </div>
 
-        <div class="carousel-item slide-bg-1" data-details="Slide 5 details">
+        <div class="carousel-item slide-bg-1" data-details="Exemplu pentru test: 9, apoi șirul: 14 17 41 24 113 34 78 19 117. *Afișează: 14 17 0 41 0 24 113 0 34 78 19 0 117">
             <img src="5.jpg" alt="Image 5">
             <div class="slide-content">
-                <p>Slide 5 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(5)">Details</button>
+                <h1>Proba 3</h1>
+                <p>Drumul este plin de gropi, iar Scufița Roșie trebuie să le acopere cu pământ sau pietre pentru a continua călătoria. </p>
+                <p>Pentru aceasta, ea trebuie să modifice un șir dat astfel: după fiecare număr prim impar din șir, să insereze un zero. Această soluție va ajuta la stabilizarea drumului și la asigurarea unei călătorii sigure.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(5)">Detalii</button>
             </div>
         </div>
-        <div class="carousel-item slide-bg-2" data-details="Slide 6 details">
+        <div class="carousel-item slide-bg-2" data-details="Exemplu pentru test: 7, apoi șirul: 1143 1282 112 2142 2707 8427 8843. *Afișează: 1143 1282 112">
             <img src="6.jpg" alt="Image 6">
             <div class="slide-content">
-                <p>Slide 6 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(6)">Details</button>
+                <h1>Proba 4</h1>
+                <p>Vremea este neplăcută, iar vrăjitoarea nu poate zbura din cauza norilor. Scufița Roșie trebuie să găsească o soluție pentru a dispersa norii, prin ștergerea anumitor numere dintr-un șir dat. </p>
+                <p>Concret, ea trebuie să elimine numerele care îndeplinesc două condiții: prima cifră a numărului este pară, iar două dintre cifrele din mijlocul numărului sunt divizibile cu 14. Este important de menționat că numerele din șir au cel puțin 4 cifre și un număr par de cifre. </p>
+                <p>Acest demers va permite vrăjitoarei să zboare din nou în voie.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(6)">Detalii</button>
             </div>
         </div>
 
-        <div class="carousel-item slide-bg-4" data-details="Slide 7 details">
+        <div class="carousel-item slide-bg-4" data-details="Exemplu pentru test: 15, apoi șirul: 4 21 17 22 1 5 8 7 9 15 11 45 23 88 90. *Afișează: 4 21 17 1 5 7 8 9 11 15 22 45 23 88 90">
             <img src="7.jpg" alt="Image 7">
             <div class="slide-content">
-                <p>Slide 7 Text</p>
-                <button class="btn btn-custom" onclick="nextSlide()">Next</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(7)">Details</button>
+                <h1>Proba 5</h1>
+                <p>Ajunse la convenția vrăjitoarelor, Scufița Roșie și vrăjitoarea trebuie să introducă un cod special pentru a putea intra. </p>
+                <p>Codul constă într-o secvență de numere, determinată de primul și ultimul element prim dintr-un șir dat. Pentru a obține codul corect, trebuie să selectezi această secvență și să ordonezi crescător elementele din ea.</p>
+                <p>Numai astfel vor putea trece de poarta magică și să intre în convenție.</p>
+                <button class="btn btn-custom" onclick="nextSlide()">Continuă</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(7)">Detalii</button>
             </div>
         </div>
 
 
-        <div class="carousel-item slide-bg-3" data-details="Slide 8 details">
+        <div class="carousel-item slide-bg-3" data-details="Cu ajutorul tău, Scufița Roșie a trecut de toate probele și a reușit să își elibereze bunica. --- Sfârșit">
             <img src="8.jpg" alt="Image 8">
             <div class="slide-content">
-                <p>Slide 8 Text</p>
+                <h1>Regăsirea</h1>
+                <p>Odată intrată, Scufița Roșie realizează că nu există nicio convenție a vrăjitoarelor. În schimb, este condusă de vrăjitoare direct la locul unde bunica ei este ținută captivă. Vrăjitoarea o conduce pe Scufița Roșie printr-o serie de coridoare întunecate și misterioase, până ajung în fața unei uși masive din lemn.</p>
+                <p>Cu ajutorul tău, Scufița Roșie a reușit să treacă toate probele dificile impuse de vrăjitoare. Fiecare provocare a fost o încercare a curajului și inteligenței ei, dar perseverența și ingeniozitatea ei au triumfat. În cele din urmă, Scufița Roșie deschide ușa și își găsește bunica, eliberând-o din captivitate și reunindu-se fericită cu aceasta.</p>
                 <button class="btn btn-custom" onclick="restartSlides()">Restart</button>
-                <button class="btn btn-secondary btn-custom" onclick="showDetails(8)">Details</button>
-                <button class="btn btn-primary btn-custom" onclick="goHome()">Home</button>
+                <button class="btn btn-secondary btn-custom" onclick="showDetails(8)">Detalii</button>
+                <button class="btn btn-primary btn-custom" onclick="goHome()">Acasă</button>
+                <p class="author-text">Morodan Teodora și Nagy Evelyn</p>
             </div>
         </div>
 
@@ -164,7 +190,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Details</h5>
+                    <h5 class="modal-title">Detalii</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -174,7 +200,7 @@
                     <img id="modal-image" src="" alt="Detail Image" class="img-fluid">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-custom" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn-custom" data-dismiss="modal">Închide</button>
                 </div>
             </div>
         </div>
