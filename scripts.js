@@ -24,7 +24,7 @@ function restartSlides() {
 function showDetails(slideNumber) {
     const detailText = $($('.carousel-item')[slideNumber - 1]).attr('data-details');
     $('#modal-text').text(detailText);
-    $('#modal-image').attr('src', `_${slideNumber}.png`);
+    $('#modal-image').attr('src', `m${slideNumber}.png`);
     $('#details-modal').modal('show');
 }
 
